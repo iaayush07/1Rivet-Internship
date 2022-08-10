@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //objects ------------
+        var a={
+            name : 'ayush',
+            age : 21,
+            gender : 'male'
+        }
+        console.log(a.age);
+
+        // create method ---
+        var child= Object.create(a);
+        console.log(child.age);
+
+        //Freeze-------
+        var b={
+            name : 'hello'
+        }
+        Object.freeze(b);
+        b.name = 'ayush';
+
+        console.log(b.name);
+        
+        //seal----
+        var c={
+            name : 'hello'
+        }
+        Object.seal(c);
+        c.name = 'ayush';
+
+        console.log(c.name);
+</script>
+</body>
+</html>
