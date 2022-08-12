@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // ------length------
+        let arr=["a","b","c","d","d"];
+        //console.log(arr.length);
+
+        // pop----A METHOD which is use to delete the element from the end of the array
+        // console.log(arr.pop());
+        // console.log(arr);
+
+        // shift----A METHOD which is use to delete the element from the start of the array
+        // console.log(arr.shift());
+        // console.log(arr);
+
+        // push----A METHOD which is use to add the element from the end of the array
+        // console.log(arr.push("e"));
+        // console.log(arr);
+        
+        // unshift----A METHOD which is use to add the element from the start of the array
+        // console.log(arr.unshift("f"));
+        // console.log(arr);
+
+        // Splice ---- A method which is used to replace elements by their index
+        // console.log(arr.splice(2,1,"f"));
+        // console.log(arr);
+
+        //split----
+        // let text ="this is rendoms text";
+        // console.log(text.split("s"));
+
+        //indexof--- a menthod which is use to search an element from starting of array
+        // console.log(arr.indexOf("d",2));
+        // console.log(arr);
+
+        //lastIndexOf --- a menthod which is use to search an element from ending of array
+        // console.log(arr.lastIndexOf("d",2));
+        // console.log(arr);
+
+        //concat--- a method which is use to merge two or more array
+        // let b=[1,2,3];
+        // let c=[4,5,9];
+        // let concat= arr.concat(b,c)
+        // console.log(concat);
+
+        // include--- which gives us  boolean value
+        // console.log(arr.includes("x"))
+        // console.log(arr.includes("d"))
+
+        // filter---it will give every possible value
+
+        // var age=[10,12,15,28,20,24];
+        // console.log(age);
+
+        // var b = age.filter(checkAdult);
+        // console.log(b);
+
+        // function checkAdult(age){
+        //     return age >= 18;
+        // }
+
+        //find---it will give 1st possible value
+        // var age=[10,12,15,28,20,24];
+        // console.log(age);
+
+        // var b = age.find(checkAdult);
+        // console.log(b);
+
+        // function checkAdult(age){
+        //     return age >= 18;
+        // }
+        
+        //every
+        // var age=[10,12,15,48,20,24];
+        // console.log(age);
+
+        // var b = age.every(checkAdult);
+        // console.log(b);
+
+        // function checkAdult(age){
+        //     return age >= 40;
+        // }
+
+
+        // //some
+        // var age=[10,12,15,48,20,24];
+        // console.log(age);
+
+        // var b = age.some(checkAdult);
+        // console.log(b);
+
+        // function checkAdult(age){
+        //     return age >= 40;
+        // }
+
+        //Map
+        var a=[10,12,15,48,20,24];
+        console.log(a);
+
+        var b = a.map(test);
+        console.log(b);
+
+        function test(x){
+            return x=x*10;
+        }
+    </script>
+</body>
+</html>
