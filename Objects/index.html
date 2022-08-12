@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // ------Imp-Mehthods ---------
+        //objects ------------
+        var a={
+            name : 'ayush',
+            age : 21,
+            gender : 'male'
+           
+        }
+
+        console.log(a.age);
+
+        a.age=24;
+        console.log(a.age);
+
+        // create method ---
+        var child= Object.create(a);
+        console.log(child.age);
+
+
+        // Asign ---- use to copy the values and properties from one or more source object to the target object
+
+        //target
+        const sub = {
+            name: "maths"
+        }
+
+        //source
+        const marks={
+            score:70
+        }
+        const result = Object.assign(sub,marks);
+        console.log(result);
+
+        //keys -- returns an array of a given object's own enumerable property names
+
+        var a={
+            name : 'ayush',
+            age : 21,
+            gender : 'male'
+        }
+        console.log(Object.keys(a));
+
+        //values--- returns an array of a given object's own enumerable property values
+
+        var a={
+            name : 'ayush',
+            age : 21,
+            gender : 'male'
+        }
+        console.log(Object.values(a));
+
+        //---Not much imp------
+
+        //hasOwn --- static method returns true/false if the specified object has the indicated property or not
+
+        var a={
+            name : 'ayush',
+            age : 21,
+            gender : 'male'
+        }
+        console.log(Object.hasOwn(a,'name'));
+        console.log(Object.hasOwn(a,'number'));
+
+        //Freeze-------makes existing properties non-writable and non-configurable. A frozen object can no longer be changed
+        var b={
+            name : 'hello',
+            id:1
+        }
+        Object.freeze(b);
+        b.name = 'ayush';
+        b.id = 2;
+
+        console.log(b.name);
+        console.log(b.id);
+        //seal---- opposite of freeze
+        var c={
+            name : 'hello'
+        }
+        Object.seal(c);
+        c.name = 'ayush';
+
+        console.log(c.name);
+        
+        // isFrozen -- determines if an object is frozen. it returns true or false.
+
+        console.log(Object.isFrozen(b));
+        console.log(Object.isFrozen(c));
+
+        //defineProperty--- defines a new property directly on an object, or modifies an existing property on an object, and returns the object
+
+        Object.defineProperty(a,'id',{
+            value:1,
+            writable:true
+        });
+
+        console.log(a.id)
+
+        a.id = 4;
+
+        console.log(a.id)
+
+        //defineProperties-- we can define maltiple properties
+
+        Object.defineProperties(a,{
+            city :{
+                value: 'Navsari',
+                writable: true
+            },
+            bGroup:{
+                value: 'O+',
+                writable: false
+            }
+        });
+
+        console.log(a.city)
+
+        // JSon-parse and strinigy--- 
+
+        //stringify -- method converts a JavaScript object or value to a JSON string
+
+        var newobj = JSON.stringify(a);
+        console.log(newobj);
+
+        var parse = JSON.parse(newobj);
+        console.log(parse);
+</script>
+</body>
+</html>
