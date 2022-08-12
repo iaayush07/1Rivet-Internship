@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 1000px;
+    border-left: 10px solid rgb(235, 83, 83);
+    background-color: lightgray;
+    margin: 0 auto;
+    padding: 60px 100px 60px 0;
+    font-family: 'Poppins', sans-serif;
+}
+.info1 {
+    width: 40%;
+    text-align: right;
+}
+.info2{
+    text-align: left;
+    padding-left: 50px;
+}
+.plus{
+    color: rgb(235, 83, 83);
+}
+.edu1{
+    width: 40%;
+    text-align: right;
+    vertical-align: top;
+}
+.edu2{
+    text-align: left;
+    padding-left: 50px;
+}
+.skill-content td{
+    padding: 0 90px 0 0;
+}
