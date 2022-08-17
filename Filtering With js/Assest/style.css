@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+h2{
+    text-align: center;
+    margin : 20px 0;
+}
+table{
+    margin : 20px auto;
+}
+td,th{
+    padding: 10px;
+}
+input{
+    width: 300px;
+    height: 25px;
+}
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    border: 1px solid lightgray;
+    background-color: #B5DFD6;
+    width: 50%;
+    height: 450px;
+}
+th{
+    background-color: #499FA4;
+}
+/* #btn{
+    background-color: #fa8072;
+} */
+.popup{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0, 0,0.6);
+    position: absolute;
+    top: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.popup-content{
+    height: 290px;
+    width: 550px;
+    background-color: #fff;
+    position: relative;
+    border-radius: 5%;
+    align-items: center;
+    text-align: center;
+}
+.buton{
+    background-color: #175873;
+    padding: 10px 15px;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.buton:hover{
+    background-color: #05263B;
+    color: #fff;
+
+}
+
+.lbl{
+    display: inline-block;
+    width: 65px;
+    text-align: left;
+}
+.close-btn{
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    background-color: white;
+    border-radius: 50%;
+}
+.d-flex{
+    display: flex;
+    justify-content: center ;
+}
+.d-flex div{
+    padding-right: 10px;
+}
+
+/* .record{
+    display: none;
+} */
+

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./Assest/style.css">
+</head>
+
+<body>
+    <!-- main container---start -->
+    <div class="container">
+        <h2>Filtering</h2>
+        <div class="d-flex justify-center">
+            <div class="searchbar">
+                <input type="text" placeholder="search name..." class="search-name" id="myInput" onkeyup="searchFun()">
+            </div>
+            <div class="btn-primary">
+                <a href="#" class="buton">Add User</a>
+            </div>
+        </div>
+        <!-- table - start -->
+        <table border="1px" cellspacing="0" id="myTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Division</th>
+                    <th>Number</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tr class="record" style="display: none;">
+                <td colspan="4" style="text-align: center;">
+                    No Record Found
+                </td>               
+            </tr>
+        </table>
+        <!-- table -- end -->
+    </div>
+    <!-- main contaainer --- end  -->
+    <!-- pop up --start -->
+    <div class="popup">
+        <div class="popup-content">
+            <br>
+            <span class="fa-solid fa-circle-xmark close-btn"></span>
+            <h3>Add New Intern</h3><br>
+            <div class="lbl-content">
+                <label for="name" class="lbl">Name</label><input type="text" id="name"><br><br>
+                <label for="div" class="lbl">Division</label><input type="text" id="div"><br><br>
+                <label for="num" class="lbl">Number</label><input type="text" id="num"><br><br>
+                <label for="eid" class="lbl">Email</label><input type="text" id="eid"><br>
+            </div> <br>
+
+            <a href="#" class="buton" id="submit-btn">Submit</a>
+        </div>
+    </div>
+    <!-- pop up --- end  -->
+</body>
+<script src="index.js"></script>
+
+</html>
