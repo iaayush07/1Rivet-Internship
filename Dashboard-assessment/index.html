@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assest/css/style.css">
+</head>
+
+<body>
+    <!-- container---start -->
+    <div class="container d-flex flex-column">
+        <!-- header---starrt -->
+        <header class="d-flex justify-spacebetween">
+            <div class="haeder-left d-flex">
+                <h2 class="logo">Logo</h2>
+                <div class="icon-color">
+                    <label for="checkbox"><span class="fa-solid fa-bars menu"></span></label>
+                </div>
+                <h2>Dashboard</h2>
+            </div>
+            <div class="header-right d-flex align-center">
+                <div> <a href="#" class="icon-color">
+                        <span class="fa-solid fa-bell"></span>
+                    </a>
+                </div>
+
+
+                <div class="profile-wrap">
+                    <img src="assest/pro.jpg" alt="profile pic">
+                </div>
+
+
+                <div>
+                    <h5 class="p-10" style="color: black;">Ayush Dhimmar</h5>
+                </div>
+                <div> <span class="fa-solid fa-caret-down p-10 icon-color"></span></div>
+            </div>
+        </header>
+        <!-- header ---end---- -->
+
+        <div class="wrapper d-flex ">
+            <!-- sidebar----start -->
+            <input type="checkbox" id="checkbox">
+            <aside>
+                <div class="side-top">
+                    <ul>
+                        <h4>General</h4>
+                        <a href="#">
+                            <li>
+                                <span class="fa-solid fa-magnifying-glass"></span>
+                                <span class="p-10">Search</span>
+                            </li>
+                        </a>
+
+                        <a href="#">
+                            <li>
+                                <span class="fa-solid fa-bell"></span>
+                                <span class="p-10">Alert</span>
+                            </li>
+                        </a>
+
+                        <a href="#">
+                            <li>
+                                <span class="fa-solid fa-tags"></span>
+                                <span class="p-10">Tags</span>
+                            </li>
+                        </a>
+
+                    </ul>
+                </div>
+                <div class="side-bottom">
+
+                    <ul>
+                        <h4>Others</h4>
+                        <a href="#">
+                            <li>
+                                <span class="fa-solid fa-gear"></span>
+                                <span class="p-10">Settings</span>
+                            </li>
+                        </a>
+
+                        <a href="#">
+                            <li>
+                                <span class="fa-solid fa-trash-can"></span>
+                                <Span class="p-10">Tips</Span>
+                            </li>
+                        </a>
+
+                        <a href="#">
+                            <li>
+                                <span class="fa-solid fa-trash-can"></span>
+                                <span class="p-10">Trash</span>
+                            </li>
+                        </a>
+
+                        <a href="#">
+                            <li>
+                                <span class="fa-solid fa-arrow-right-from-bracket"></span>
+                                <span class="p-10">Logout</span>
+                            </li>
+                        </a>
+                    </ul>
+                </div>
+            </aside>
+            <!-- sidebar----end----- -->
+            <!-- main----start -->
+            <main>
+                <div class="searchbar d-flex">
+                    <div></div>
+                    <div class="searchbox">
+                        <label for="search-icon"><span class="icon fa-solid fa-magnifying-glass"></span></label>
+                        <input type="text" placeholder="Search here" name="search" id="search-icon" onkeyup="searchFun()">
+                        <button class="btn ">Filter</button>
+                    </div>
+                </div>
+                <div class="activity" >
+                    <h3>Recent Activity</h3>
+                    <div class="main-table">
+                        <table id="myTable">
+                            <thead>
+                                <th>Item</th>
+                                <th>Date</th>
+                                <th>Type</th>
+                                <th>Est.Cost</th>
+                                <th>List</th>
+                                <th>List</th>
+                                <th>Auto</th>
+                                <th>Buy Now</th>
+                            </thead>
+                            <tbody class="table-body">
+                                <!-- <tr class="norecord d-none">
+                                    <td colspan="8">NO Record Found</td>
+                                </tr> -->
+                            </tbody>
+                        </table>
+                        <div class="norecord d-none">
+                            NO Record Found
+                        </div>
+                    </div>                  
+                </div>
+            </main>
+            <!-- main-----end -->
+        </div>
+
+    </div>
+    <!-- container---end---- -->
+    <!-- scrip--------- -->
+    <script src="/assest/javascript/index.js"></script>
+</body>
+
+</html>
