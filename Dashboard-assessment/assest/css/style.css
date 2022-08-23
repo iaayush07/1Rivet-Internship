@@ -238,6 +238,24 @@ td {
 .overflow-hidden {
     overflow: hidden;
 }
+/* bgcolor */
+.bg{
+    background-color: #f6f6f6;
+    border-radius: 10px;
+    padding: 5px;
+}
+.red{
+    background-color: #ffeeed;
+    color: red;
+}
+.green{
+    background-color: #f2fcf4;
+    color: green;
+}
+.yellow{
+    background-color: #fff7e4;
+    color: #e79c4d;
+}
 
 /* responsive */
 @media(max-width:600px) {
