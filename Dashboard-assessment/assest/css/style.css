@@ -237,14 +237,21 @@ table th{
     position: sticky;
     top: 0;
 }
+.norecord{
+    padding: 15px;
+    text-align: center;
+    background-color: white;
+}
+a{
+    cursor: pointer;
+}
+
 
 /* table end--- */
 /* filter---- */
 .norecord {
     color: red;
-    padding: 15px;
     text-align: center;
-    background-color: white;
 }
 
 .d-none {
