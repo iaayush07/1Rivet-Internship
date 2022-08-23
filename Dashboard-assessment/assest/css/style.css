@@ -75,6 +75,9 @@ main {
 .menu {
     margin: 10px 10px 0px 10px;
 }
+.menu:hover{
+    color: #16b031;
+}
 
 .btn {
     background-color: #16b031;
