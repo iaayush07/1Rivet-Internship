@@ -94,8 +94,26 @@ setTimeout(() => {
             for (const item in user) {
                 const tblColumn = document.createElement('td');
                 const value = user[item];
-    
-                tblColumn.textContent = value;
+
+                if(item=="type"){
+                    const bgcolor = document.createElement('span');
+                    bgcolor.classList.add('bg');
+                    bgcolor.textContent=user[item];
+                    
+                    if(user[item]== "Discarded"){
+                        bgcolor.classList.add('red');
+                    }
+                    if(user[item]== "Want"){
+                        bgcolor.classList.add('green');
+                    }
+                    if(user[item]== "Waiting"){
+                        bgcolor.classList.add('yellow');
+                    }
+                    tblColumn.appendChild(bgcolor);
+                }
+                else{
+                    tblColumn.textContent = value;
+                }
                 tblRow.appendChild(tblColumn);
             }
     
