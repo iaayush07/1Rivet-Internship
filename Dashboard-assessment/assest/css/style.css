@@ -228,7 +228,9 @@ td {
 /* filter---- */
 .norecord {
     color: red;
+    padding: 15px;
     text-align: center;
+    background-color: white;
 }
 
 .d-none {
