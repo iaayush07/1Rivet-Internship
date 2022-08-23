@@ -216,15 +216,26 @@ a {
 
 table {
     width: 100%;
-    margin-top: 15px;
     border-radius: 5px;
     border-spacing: 0px 10px;
+    position: relative;
 }
+
 
 table th,
 td {
     padding: 15px;
+    text-align: center;
     background-color: white;
+}
+.main-table{
+    margin-top: 15px;
+    height: 500px;
+    overflow: auto;
+}
+table th{
+    position: sticky;
+    top: 0;
 }
 
 /* table end--- */
