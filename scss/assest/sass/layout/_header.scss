@@ -1,0 +1,40 @@
+// header------start
+.header {
+    display: flex;
+    align-items: center;
+    height: 55px;
+    background-color: $bgcolor;
+
+    &-right {
+        margin-right: 20px;
+        .profile-wrap {
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-left: 10px;
+            img {
+                height: auto;
+                width: 100%;
+            }
+        }
+    }
+
+    .logo {
+        width: 220px;
+        text-align: center;
+    }
+
+    .icon-color {
+        color: hsl(240deg 3% 65%);
+    }
+
+    .icon-color:hover {
+        color: #16b031;
+    }
+
+    .menu {
+        margin: 10px 10px 0px 10px;
+    }
+}
+// header--end

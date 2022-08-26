@@ -1,0 +1,40 @@
+/* responsive */
+@media(max-width:600px) {
+    aside {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 2;
+        background-color: #f2fcf4;
+    }
+}
+
+@media (max-width: 600px) {
+    .main-table {
+        width: 100%;
+        overflow-y: hidden;
+    }
+}
+@media (max-width: 1200px){
+    .card-wrap{
+        width: 33%;
+    }
+}
+@media (max-width: 900px){
+    .card-wrap{
+        width: 50%;
+    }
+}
+@media (max-width: 600px){
+    .card-wrap{
+        width: 100%;
+    }
+}
+
+/* @media (max-width: 1000px) {
+    aside {
+        width: 0%;
+        transform: translateX(-300px);
+    }
+} */

@@ -1,0 +1,110 @@
+//main--start--
+main {
+    height: 100%;
+    width: 100%;
+    margin-top: 3px;
+    margin-left: 3px;
+
+    /* seachbar start----- */
+    .searchbar {
+        margin: 30px;
+        justify-content: space-between;
+
+        .searchbox {
+            background-color: hsl(218deg 14% 89%);
+
+            .icon {
+                padding-left: 10px;
+            }
+
+            #search-icon {
+                all: unset;
+                padding: 0 20px;
+                padding: 8px 14px;
+                color: #abb1be;
+                width: 240px;
+            }
+
+            .btn {
+                all: unset;
+                font-size: 14px;
+                padding: 8px 14px;
+                cursor: pointer;
+                background-color: #16b031;
+                color: #fff;
+            }
+        }
+    }
+
+    .searchbar ::placeholder {
+        color: #abb1be;
+        font-weight: 300;
+        font-family: 'Poppins', sans-serif;
+        font-size: 14px;
+    }
+
+    /* searchbar   end---- */
+    // card wrapper start----
+    .card-wrapper {
+        margin: 0 30px;
+    }
+
+    // .card {
+    //     // display: flex;
+    //     // align-items: center;
+    //     // justify-content: center;
+    //     // padding: 10px;
+    //     // border: 1px solid #dddddd;
+    //     // height: 80px;
+    //     // width: 220px;
+    //     // margin-right: 10px;
+    //     // border-radius: 10px;
+    //     // background-color: #d8f0de;
+    //   }
+    //   .card:hover{
+    //     background-color: #6adf80;
+    //   }
+}
+
+// card wrapper end-----
+/* table-start */
+.activity {
+    margin: 30px;
+
+    .main-table {
+        margin-top: 15px;
+        height: 500px;
+        overflow: auto;
+
+        table {
+            width: 100%;
+            border-radius: 5px;
+            border-spacing: 0px 10px;
+            position: relative;
+
+            th,
+            td {
+                padding: 15px;
+                text-align: center;
+                background-color: $bgcolor;
+            }
+
+            th {
+                position: sticky;
+                top: 0;
+            }
+        }
+
+        .norecord {
+            padding: 15px;
+            text-align: center;
+            background-color: $bgcolor;
+            color: red;
+        }
+    }
+}
+
+/* table end--- */
+
+
+//--main---end

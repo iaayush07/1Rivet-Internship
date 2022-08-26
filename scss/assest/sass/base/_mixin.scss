@@ -1,0 +1,43 @@
+@mixin card-style() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: 1px solid #dddddd;
+    height: 80px;
+    width: 220px;
+    margin-right: 10px;
+    border-radius: 10px;
+    background-color: #d8f0de;
+}
+.card{
+    @include card-style();
+}
+.card-two{
+    background-color: rgb(216, 212, 155);
+    @extend .card;
+}
+.card-three{
+    background-color: rgb(223, 132, 185);
+    @extend .card;
+}
+.card-four{
+    background-color: rgb(147, 211, 211);
+    @extend .card;
+}
+
+@mixin card-hover($value){
+    background-color: $value;
+}
+.card-one:hover{
+    @include card-hover(#6adf80);
+}
+.card-two:hover{
+    @include card-hover(#22db44);
+}
+.card-three:hover{
+    @include card-hover(#02270a);
+}
+.card-four:hover{
+    @include card-hover(#515f53);
+}
