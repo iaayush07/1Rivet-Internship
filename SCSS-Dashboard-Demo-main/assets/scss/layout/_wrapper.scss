@@ -1,0 +1,123 @@
+.page-wrapper {
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+}
+
+.main-content {
+  flex-grow: 1;
+}
+
+.main-wrapper {
+  height: 100%;
+  flex-grow: 1;
+  overflow: auto;
+  background-color: #f4f4f4;
+  padding: 30px;
+
+  .page-title {
+    margin: 0;
+  }
+
+  .category-dropdown {
+    display: inline-block;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: #ffffff;
+    color: $black;
+    padding: 8px 15px;
+  }
+}
+
+//card-list
+.course-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  .course-item {
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+
+    .card {
+      background-color: #ffffff;
+      border-radius: 4px;
+      overflow: hidden;
+
+      .card-header {
+        height: 150px;
+        overflow: hidden;
+      }
+    }
+  }
+
+  .course-item+.course-item {
+    margin-left: 38px;
+  }
+}
+
+.card-body {
+  padding: 15px 20px;
+
+  .card-title {
+    color: $black;
+  }
+
+  .card-desc {
+    color: #8c8c8c;
+    font-size: 14px;
+  }
+
+  .user-list {
+    @include flex-center;
+  }
+
+  .user-item {
+    display: inline-block;
+    height: 35px;
+    width: 35px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  .user-item+.user-item {
+    margin-left: -5px;
+  }
+}
+
+/* Progress */
+.progress-line {
+  position: relative;
+  height: 8px;
+  width: 75%;
+  background-color: #ebebeb;
+  border-radius: 10px;
+ 
+  .line-1 {
+    position: absolute;
+    height: 100%;
+    border-radius: 10px;
+    @include percentage-color(76%, #5f91f0);
+  }
+
+  .line-2 {
+    position: absolute;
+    height: 100%;
+    border-radius: 10px;
+    @include percentage-color(32%, #f08d5f);
+  }
+
+  .line-3 {
+    position: absolute;
+    height: 100%;
+    border-radius: 10px;
+    @include percentage-color(46%, #6bf05f);
+  }
+}
+
+.progress-value {
+  color: #8c8c8c;
+  font-size: 18px;
+}
+

@@ -1,0 +1,8 @@
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+}
+@mixin percentage-color($percentage,$bg) {
+  width: $percentage;
+  background-color: $bg;
+}

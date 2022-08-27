@@ -1,0 +1,59 @@
+.topbar {
+  height: $header-height;
+  flex-shrink: 0;
+  padding: 0 30px;
+
+  // searchbar----
+  .search-wrapper {
+    .icon {
+      color:$black;
+    }
+    .search {
+      border: 0;
+      padding: $nav-padding-y 15px;
+      font-weight: $font-weight-medium;
+    }
+    .search:focus,.search:focus-visible {
+      outline: none;
+    }
+    .search::placeholder {
+      color: #000000;
+    }
+  }
+}
+/* Notification */
+.notification {
+  position: relative;
+  color: #6a6a6a;
+  padding: 2px;
+}
+.notification::after {
+  position: absolute;
+  right: 0;
+  bottom: 5px;
+  content: '';
+  height: 6px;
+  width: 6px;
+  background: $primary;
+  border-radius: 50%;
+}
+.action-item-2 {
+
+  .user-profile {
+    @include flex-center;
+
+    .user-name {
+      @include flex-center;
+      justify-content: center;
+      height: 40px;
+      width: 40px;
+      background-color: #f77ed8;
+      color: #ffffff;
+      border-radius: 50%;
+    }
+    .icon {
+      font-size: 14px;
+      color:$icon-color;
+    }
+  }
+}
