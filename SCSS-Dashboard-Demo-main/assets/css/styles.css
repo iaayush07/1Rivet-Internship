@@ -234,6 +234,10 @@ a {
   text-decoration: none;
 }
 
+.d-flex {
+  display: flex;
+}
+
 .flex-center {
   display: flex;
   align-items: center;
@@ -424,6 +428,7 @@ img {
 .course-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 .course-list .course-item {
   display: flex;

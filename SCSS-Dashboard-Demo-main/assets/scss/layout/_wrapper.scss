@@ -33,6 +33,7 @@
 .course-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 
   .course-item {
     display: flex;
@@ -95,23 +96,17 @@
   border-radius: 10px;
  
   .line-1 {
-    position: absolute;
-    height: 100%;
-    border-radius: 10px;
+    @include line-percentage;
     @include percentage-color(76%, #5f91f0);
   }
 
   .line-2 {
-    position: absolute;
-    height: 100%;
-    border-radius: 10px;
+    @include line-percentage;
     @include percentage-color(32%, #f08d5f);
   }
 
   .line-3 {
-    position: absolute;
-    height: 100%;
-    border-radius: 10px;
+    @include line-percentage;
     @include percentage-color(46%, #6bf05f);
   }
 }
