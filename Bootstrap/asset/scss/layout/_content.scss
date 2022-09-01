@@ -1,3 +1,19 @@
 // .content{
 //     border: 1px solid greenyellow;
 // }
+.rounded-circle{
+    height: 40px;
+    width: 40px;
+}
+.table-wrapper{  
+    border-radius: 8px;
+    .table{
+        background-color: $table-bg;
+        td{
+            p{
+                color: #7b7d8a;
+                margin-bottom: 0;
+            }
+        } 
+    } 
+}

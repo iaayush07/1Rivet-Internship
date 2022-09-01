@@ -8,4 +8,19 @@ $border-radius : 6px;
 $nav-link-color:#9c9ea5;
 
 // badge-color
+$badge-bg : #2a2e3e;
 $badge-text : $nav-link-color;
+//card-color
+$card-bg : $badge-bg;
+//table color
+$table-bg : $badge-bg;
+$table-border-width :0;
+$table-wrapper-radius:$border-radius;
+//header
+$header-border-radius: $border-radius;
+
+$card-icon-bg-color:(
+    '.default':$primary,     
+    '.danger':  #ae6f8a,      
+    '.success':#69a169,    
+);

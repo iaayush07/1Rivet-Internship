@@ -1,0 +1,14 @@
+
+.card{
+    background-color: $card-bg;
+    border: none;
+    &:hover{
+        background-color: #138ffa;
+    }
+}
+.card-title{
+    color: #646777;
+}
+// .icon-wrapper{
+
+// }

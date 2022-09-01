@@ -1,5 +1,6 @@
 aside{
-    width: 220px;
+    width: 250px;
+    background-color: $bg-color;
     .nav{
         &-item{
             .nav-link{
@@ -20,15 +21,14 @@ aside{
     }
     .badge{
         height: 250px;
-        background-color: #2a2e3e;
+        background-color: $badge-bg;
         border-radius: 12px;
    
-        .image{
-            
+        .image{  
             width: 80px;
             height: 100px;
             margin-top: -70px;
-            transform: rotate(-20deg);
+            transform: rotate(-10deg);
         }
         .btn{
             border-radius: 10px;
