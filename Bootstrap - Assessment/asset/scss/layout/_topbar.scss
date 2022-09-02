@@ -1,0 +1,30 @@
+header {
+    height: 80px;
+    background-image: linear-gradient(to right, #f9fafc, #ffffff);
+
+    img {
+        height: 40px;
+        width: 40px;
+    }
+
+    .search {
+        outline: none;
+        border: none;
+        background-color: transparent;
+    }
+
+    .notification {
+        position: relative;
+    }
+
+    .notification::after {
+        position: absolute;
+        right: -1px;
+        top: -1px;
+        content: '';
+        height: 6px;
+        width: 6px;
+        background: red;
+        border-radius: 50%;
+    }
+}

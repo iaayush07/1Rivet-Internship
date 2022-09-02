@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bootstrap assessment</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="asset/css/styles.css">
+</head>
+
+<body>
+    <!-- container---start-- -->
+    <div class="main-container d-flex w-100 h-100">
+        <!-- aside---start-- -->
+        <aside class="d-flex flex-column h-100 d-sm-none d-none d-lg-block d-md-block">
+            <div class=" d-flex justify-content-center align-items-center m-4">
+                <span class="fa-regular fa-heart text-secondary"></span>
+                <span class="text-secondary ps-3"> FITTLE</span>
+            </div>
+            <ul class="nav flex-column w-100">
+                <li class="nav-item d-flex justify-content-center align-items-center nav-active-item">
+                    <a class="nav-link d-flex flex-column justify-content-center align-items-center active w-100"
+                        href="#">
+                        <span class="fas fa-regular fa-gauge my-3"></span>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item d-flex justify-content-center align-items-center">
+                    <a class="nav-link d-flex flex-column justify-content-center align-items-center" href="#">
+                        <span class="fas fa-regular fa-school my-3"></span>
+                        <span>My subscription</span>
+                    </a>
+                </li>
+                <li class="nav-item d-flex justify-content-center align-items-center">
+                    <a class="nav-link d-flex flex-column justify-content-center align-items-center" href="#">
+                        <span class="fas fa-regular fa-house-user my-3"></span>
+                        <span>My studio</span>
+                    </a>
+                </li>
+                <li class="nav-item d-flex justify-content-center align-items-center">
+                    <a class="nav-link d-flex flex-column justify-content-center align-items-center">
+                        <span class="fas fa-regular fa-calendar my-3"></span>
+                        <span>Post A Job</span>
+                    </a>
+                </li>
+                <li class="nav-item d-flex justify-content-center align-items-center">
+                    <a class="nav-link d-flex flex-column justify-content-center align-items-center">
+                        <span class="fas fa-regular fa-calendar my-3"></span>
+                        <span> events</span>
+                    </a>
+                </li>
+                <li class="nav-item d-flex justify-content-center align-items-center">
+                    <a class="nav-link d-flex flex-column justify-content-center align-items-center">
+                        <span class="fas fa-regular fa-bell my-3"></span>
+                        <span>Notifications</span>
+                    </a>
+                </li>
+                <li class="nav-item d-flex justify-content-center align-items-center">
+                    <a class="nav-link d-flex flex-column justify-content-center align-items-center">
+                        <span class="fas fa-regular fa-gear my-3"></span>
+                        <span>Settings</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+        <!-- aside---end -->
+        <!-- section   start--- -->
+        <section class="w-100 h-100 d-flex flex-column">
+            <!-- hedader start---- -->
+            <header class="d-flex flex-grow-1 align-items-center justify-content-between">
+                <div class="searchbar d-flex align-items-center flex-grow-1 mx-5">
+                    <span class="fa-solid fa-magnifying-glass me-3 text-secondary"></span>
+                    <input type="text" placeholder="search" class="search">
+                </div>
+                <div class="me-3">
+                    <span class="fas fa-light fa-bell me-3 notification"></span>
+                    <span class="me-3 text-secondary">Ayush Dhimmar</span>
+                    <img src="/asset/images/profile.jpg" class="rounded-circle ">
+                </div>
+            </header>
+            <!-- header--end-- -->
+            <!-- main--start--- -->
+            <main class="px-5 my-3 d-flex flex-column h-100 flex-grow-1 overflow-auto">
+                <h3>Dashboard</h3>
+                <p class="text-secondary">Hello, Ryne! check out what's happening today!</p>
+                <div class="row row-1 mb-4 ">
+                    <div class="d-flex col-12 align-items-center justify-content-between">
+                        <div class="d-flex align-items-center">
+                            <span class="fas fa-duotone fa-circle-exclamation ms-3"></span>
+                            <p class="text-secondary ms-3 ">Thanks for joining YPC! Go ahead and</p>
+                            <button type="button" class="btn btn-success ms-3">Success</button>
+                        </div>
+                        <div>
+                            <span class="fas fa-duotone fa-xmark text-secondary"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row row-2 mb-4">
+                    <div class="d-flex col-12 align-items-center justify-content-between">
+                        <div class="d-flex align-items-center">
+                            <span class="fas fa-duotone fa-circle-exclamation ms-3"></span>
+                            <p class="text-secondary ms-3">you have 2 unread notifications</p>
+                            <button type="button" class="btn btn-secondary ms-3">Read now</button>
+                        </div>
+                        <div>
+                            <span class="fas fa-duotone fa-xmark text-secondary"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row row-3 ">
+                    <div class=" col-lg-6 col-sm-12 table-wrapper overflow-auto">
+                        <!-- table--start -->
+                        <table class="table mb-0">
+                            <thead class="border-bottom">
+                                <tr class="pb-2">
+                                    <th scope="col" class="text-secondary">New Brisbane Instructor - 02</th>
+                                    <th scope="col"><span class="fa-regular fa-eye text-secondary"></span><span
+                                            class="text-secondary ps-1">view all</span> </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div>
+                                            <h4>Thomas Budiman</h4>
+                                            <p class="text-secondary">24 hours fitness | 1050 broen street</p>
+                                            <button type="button" class="btn btn-success ms-3">Part Time</button>
+                                            <button type="button" class="btn btn-secondary ms-3">Aerial Yoga</button>
+                                            <button type="button" class="btn btn-secondary ms-3 mt-lg-0 mt-md-1">Yoga</button>
+                                        </div>
+                                    <td>
+                                        <div class="ps-3">
+                                            <span class="fa-regular fa-eye text-secondary"></span>
+                                            <span class="text-secondary">5min</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div>
+                                            <h4>Thomas Budiman</h4>
+                                            <p class="text-secondary text-secondary">24 hours fitness | 1050 broen
+                                                street</p>
+                                            <button type="button" class="btn btn-secondary ms-3">Part Time</button>
+                                            <button type="button" class="btn btn-secondary ms-3">Aerial Yoga</button>
+                                            <button type="button" class="btn btn-secondary ms-3 mt-lg-0 mt-md-1">Yoga</button>
+                                        </div>
+                                    <td>
+                                        <div class="ps-3">
+                                            <span class="fa-regular fa-eye text-secondary"></span>
+                                            <span class="text-secondary">5min</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div>
+                                            <h4>Thomas Budiman</h4>
+                                            <p class="text-secondary">24 hours fitness | 1050 broen street</p>
+                                            <button type="button" class="btn btn-secondary ms-3">Part Time</button> 
+                                            <button type="button" class="btn btn-secondary ms-3">Aerial Yoga</button> 
+                                            <button type="button" class="btn btn-secondary ms-3 mt-lg-0 mt-md-1">Yoga</button>
+                                        </div>
+                                    <td>
+                                        <div class="ps-3">
+                                            <span class="fa-regular fa-eye text-secondary"></span>
+                                            <span class="text-secondary">5min</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div>
+                                            <h4>Thomas Budiman</h4>
+                                            <p class="text-secondary">24 hours fitness | 1050 broen street</p>
+                                            <button type="button" class="btn btn-secondary ms-3">Part Time</button> 
+                                            <button type="button" class="btn btn-secondary ms-3">Aerial Yoga</button> 
+                                            <button type="button" class="btn btn-secondary ms-3 mt-lg-0 mt-md-1">Yoga</button>
+                                        </div>
+                                    <td>
+                                        <div class="ps-3">
+                                            <span class="fa-regular fa-eye text-secondary"></span>
+                                            <span class="text-secondary">5min</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div>
+                                            <h4>Thomas Budiman</h4>
+                                            <p class="text-secondary">24 hours fitness | 1050 broen street</p>
+                                            <button type="button" class="btn btn-secondary ms-3">Part Time</button> 
+                                            <button type="button" class="btn btn-secondary ms-3">Aerial Yoga</button> 
+                                            <button type="button" class="btn btn-secondary ms-3 mt-lg-0 mt-md-1">Yoga</button>
+                                        </div>
+                                    <td>
+                                        <div class="ps-3">
+                                            <span class="fa-regular fa-eye text-secondary"></span>
+                                            <span class="text-secondary">5min</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div>
+                                            <h4>Thomas Budiman</h4>
+                                            <p class="text-secondary">24 hours fitness | 1050 broen street</p>
+                                            <button type="button" class="btn btn-secondary ms-3">Part Time</button> 
+                                            <button type="button" class="btn btn-secondary ms-3">Aerial Yoga</button> 
+                                            <button type="button" class="btn btn-secondary ms-3 mt-lg-0 mt-md-1">Yoga</button>
+                                        </div>
+                                    <td>
+                                        <div class="ps-3">
+                                            <span class="fa-regular fa-eye text-secondary"></span>
+                                            <span class="text-secondary">5min</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class=" col-lg-6 col-sm-12 mt-lg-0 mt-md-4 mt-sm-4 table-wrapper overflow-auto">
+                        <table class="table mb-0">
+                            <thead class="border-bottom">
+                                <tr class="pb-2">
+                                    <th scope="col" class="text-secondary">Most popular Brisbane classes + 02</th>
+                                    <th scope="col" class="text-primary"><span
+                                            class="fa-regular fa-timer text-secondary"></span><span
+                                            class="text-secondary ps-1">view all</span> </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div>
+                                            <h4>Yoga Master</h4>
+                                            <p class="text-secondary">24 hours fitness | 1050 broen street</p>
+
+                                        </div>
+                                    <td>
+                                        <div class="ps-3">
+                                            <span class="fa-regular fa-eye text-secondary"></span>
+                                            <span class="text-secondary">5min</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div>
+                                            <h4>Crossfit proffesional meetup</h4>
+                                            <p class="text-secondary text-secondary">24 hours fitness | 1050 broen
+                                                street</p>
+
+                                        </div>
+                                    <td>
+                                        <div class="ps-3">
+                                            <span class="fa-regular fa-eye text-secondary"></span>
+                                            <span class="text-secondary">5min</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div>
+                                            <h4>Pilates yoga and barre instructor</h4>
+                                            <p class="text-secondary">24 hours fitness | 1050 broen street</p>
+
+                                        </div>
+                                    <td>
+                                        <div class="ps-3">
+                                            <span class="fa-regular fa-eye text-secondary"></span>
+                                            <span class="text-secondary">5min</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div>
+                                            <h4>Studio Assistant</h4>
+                                            <p class="text-secondary">24 hours fitness | 1050 broen street</p>
+
+                                        </div>
+                                    <td>
+                                        <div class="ps-3">
+                                            <span class="fa-regular fa-eye text-secondary"></span>
+                                            <span class="text-secondary">5min</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div>
+                                            <h4>Studio Assistant</h4>
+                                            <p class="text-secondary">24 hours fitness | 1050 broen street</p>
+
+                                        </div>
+                                    <td>
+                                        <div class="ps-3">
+                                            <span class="fa-regular fa-eye text-secondary"></span>
+                                            <span class="text-secondary">5min</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div>
+                                            <h4>Studio Assistant</h4>
+                                            <p class="text-secondary">24 hours fitness | 1050 broen street</p>
+
+                                        </div>
+                                    <td>
+                                        <div class="ps-3">
+                                            <span class="fa-regular fa-eye text-secondary"></span>
+                                            <span class="text-secondary">5min</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div>
+                                            <h4>Studio Assistant</h4>
+                                            <p class="text-secondary">24 hours fitness | 1050 broen street</p>
+
+                                        </div>
+                                    <td>
+                                        <div class="ps-3">
+                                            <span class="fa-regular fa-eye text-secondary"></span>
+                                            <span class="text-secondary">5min</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- table---end -->
+                </div>
+
+            </main>
+            <!-- main----end--- -->
+        </section>
+        <!-- section--end-- -->
+    </div>
+    <!-- container---end--- -->
+</body>
+
+</html>

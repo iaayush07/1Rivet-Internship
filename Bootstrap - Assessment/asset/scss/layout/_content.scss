@@ -1,0 +1,37 @@
+.row-1,.row-2{
+    height: 60px;
+    background-color: $row-color;
+    border-radius: $border-radius;
+    p{
+        margin-bottom: 0;
+    }
+}
+
+.row-3{
+    .table-wrapper{
+        height: 400px;
+        table{
+            background-color: $row-color;
+            border-radius: $border-radius;
+            thead{
+                background-color: #ffffff;
+                position: sticky;
+                top: 0;
+                
+            }
+            // height: 450px;
+        }
+    } 
+}
+.btn{
+    border-radius: $btn-border-radius;
+}
+.btn-secondary{
+    background-color: #e8f7f4;
+    color: #32a897;
+    border: none;
+}
+.overflow{
+    overflow-y: auto ;
+    scrollbar-width: thin;
+}

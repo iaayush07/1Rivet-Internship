@@ -1,0 +1,38 @@
+aside {
+    width: 180px;
+    background-color: $aside-color;
+    .nav {
+        &-item {
+            &-link {
+                color: $nav-link-color;
+            }
+
+            &:hover {
+                color: #2da698;
+                background-color: #f6fafc;
+                transition: 0.25s;
+            }
+        }
+    }
+}
+
+.active {
+    color: #2da698;
+    background-color: #f6fafc;
+    position: relative;
+}
+
+.active::after {
+    width: 0;
+    height: 0;
+    position: absolute;
+    content: "";
+    display: block;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #2da698;
+    bottom: 0;
+    right: 0;
+    transform: rotate(-45deg);
+    margin-left: -8px;
+}
