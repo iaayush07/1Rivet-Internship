@@ -1,0 +1,32 @@
+What are new features of Angular 14?
+
+ Angular 14 :
+
+a)Angular CLI Auto-Completion : CLI enables real-time type ahead auto-completion in the terminal.
+b) Strictly Typed Forms : Angular's model-driven approach to working with forms.
+c)Angular DevTools : In offline mode, you can use the Angular DevTools debugging plugin.
+d)Enhanced Template Diagnostics : allow Angular developers to be protected from common errors by the compiler
+
+2)What are differences between Workspace,Projects and libraries?
+
+     1.Workspace : collection of projects
+                             command : ng new myworkspace
+     2.Project   : collection of librabries
+     3.libary    : A library is a collection of components, services, directives etc. that can be shared across different Angular projects.
+                    command : ng g library mylibrary  
+
+3) what are difference between dependancies, dev dependancies and peer dependancies?
+    1 Dependencies: In package.json file, there is an object called dependencies and 
+                    it consists of all the packages that are used in the project with its version number. 
+    2 Dev Dependencies: In package.json file, there is an object called as dev Dependencies and it consists 
+                        of all the packages that are used in the project in its development phase and not in 
+                        the production or testing environment with its version number.
+    3 Peer Dependencies: In package.json file, there is an object called as peerDependencies and it consists 
+                         of all the packages that are exactly required in the project or to the person who is 
+                         downloading and the version numbers should also be the same.
+
+4) whatare differences between version, tilde version and caret version?
+    1  version "14.0.0"   :   defines version
+    2  version "^14.0.0"  : ^ freezes the major number only.
+    3  version"~14.0.0"   : ~ freezes major and minor numbers.
+
