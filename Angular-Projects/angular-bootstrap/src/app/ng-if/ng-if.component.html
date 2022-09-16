@@ -1,0 +1,9 @@
+<button type="button" class="btn btn-primary" (click)="createBlock()">Create block</button>
+<div *ngIf="display; then thenblock ; else elseblock"></div>
+
+<ng-template #thenblock>
+    <h4>Component</h4>
+</ng-template>
+<ng-template #elseblock>
+    <h4>Hidden</h4>
+</ng-template>

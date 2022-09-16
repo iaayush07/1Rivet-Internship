@@ -1,0 +1,16 @@
+<div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" >
+      Select Item
+    </button>
+    <ul class="dropdown-menu" >
+      <li (click)="select='Action'"><a class="dropdown-item" href="#">Action</a></li>
+      <li (click)="select='Another'"><a class="dropdown-item" href="#">Another action</a></li>
+      <li (click)="select='Something'"> <a class="dropdown-item" href="#">Something else here</a></li>
+    </ul>
+</div>
+<div [ngSwitch]="select">
+    <div *ngSwitchCase="'Action'"> Action View Content</div>
+    <div *ngSwitchCase="'Another'">Another View Content</div>
+    <div *ngSwitchCase="'Something'">Something View Content</div>
+    <div *ngSwitchDefault>Otherwise</div>
+</div>
