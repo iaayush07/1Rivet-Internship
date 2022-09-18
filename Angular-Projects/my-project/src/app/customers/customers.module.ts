@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import {customer} from './customers.model';
 
 import { CustomersRoutingModule } from './customers-routing.module';
 import { CustomersComponent } from './customers.component';
 import { CustomerListComponent } from './customer-list/customer-list.component';
 import { CustomerFormComponent } from './customer-form/customer-form.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -15,11 +17,14 @@ import { CustomerFormComponent } from './customer-form/customer-form.component';
   ],
   imports: [
     CommonModule,
-    CustomersRoutingModule
+    CustomersRoutingModule,
+    FormsModule
   ],
   exports : [
     CustomerListComponent,
     CustomerFormComponent
   ]
 })
-export class CustomersModule { }
+export class CustomersModule { 
+ 
+}

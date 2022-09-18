@@ -1,25 +1,20 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CoreModule } from './core/core.module';
-import { CustomersModule } from './customers/customers.module';
-import { HomeComponent } from './home/home.component';
-import { SharedModule } from './shared/shared.module';
+import { UserFormComponent } from './user-form/user-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    // CustomersModule
+    UserFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CoreModule,
-    SharedModule,
-    CustomersModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

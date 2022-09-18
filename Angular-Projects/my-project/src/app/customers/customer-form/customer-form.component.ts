@@ -31,4 +31,7 @@ export class CustomerFormComponent implements OnInit {
   onCancle(){
     this.route.navigate(['customers','customer-list'])
   }
+  customerSubmit(value : any){
+    console.log(value);
+  }
 }
