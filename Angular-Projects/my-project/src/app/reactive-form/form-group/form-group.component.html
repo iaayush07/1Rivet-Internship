@@ -1,0 +1,99 @@
+<form [formGroup]="groupForm" class="m-5">
+    <!-- 2 column grid layout with text inputs for the first and last names -->
+    <div class="row mb-4">
+        <div class="col">
+            <div class="form-outline">
+                <input type="text" id="form6Example1" class="form-control" formControlName="fname">
+                <label class="form-label" for="form6Example1">First name</label>
+                <div *ngIf="f['fname'].invalid && (f['fname'].touched || f['fname'].dirty)">
+                    <div *ngIf="f['fname'].errors && f['fname'].errors['required']" class="text-danger">First
+                        Name is
+                        required.</div>
+                    <div *ngIf="f['fname'].errors?.['minlength']" class="text-danger">
+                        First Name shold have minimun 3 Characters.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col">
+            <div class="form-outline">
+                <input type="text" id="form6Example2" class="form-control" formControlName="lname">
+                <label class="form-label" for="form6Example2">Last name</label>
+                <div *ngIf="f['lname'].invalid && (f['lname'].touched || f['lname'].dirty)">
+                    <div *ngIf="f['lname'].errors && f['lname'].errors['required']" class="text-danger">
+                        Last Name is required.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-4">
+        <!-- Text input -->
+        <div class="form-outline col mb-4">
+            <input type="text" id="form6Example3" class="form-control" formControlName="companyname">
+            <label class="form-label" for="form6Example3">Company name</label>
+            <div *ngIf="f['companyname'].invalid && (f['companyname'].touched || f['companyname'].dirty)">
+                <div *ngIf="f['companyname'].errors && f['companyname'].errors['required']" class="text-danger">
+                    Company Name is required
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Text input -->
+        <div class="form-outline col mb-4">
+            <input type="text" id="form6Example4" class="form-control" formControlName="address">
+            <label class="form-label" for="form6Example4">Address</label>
+            <div *ngIf="f['address'].invalid && (f['address'].touched || f['address'].dirty)">
+                <div *ngIf="f['address'].errors && f['address'].errors['required']" class="text-danger">
+                    Address is required.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-4">
+        <!-- Email input -->
+        <div class="form-outline mb-4 col">
+            <input type="email" id="form6Example5" class="form-control" formControlName="email">
+            <label class="form-label" for="form6Example5">Email</label>
+            <div *ngIf="f['email'].invalid && (f['email'].touched || f['email'].dirty)">
+                <div *ngIf="f['email'].errors && f['email'].errors['required']" class="text-danger">
+                    Email is required.
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Number input -->
+        <div class="form-outline mb-4 col">
+            <input type="text" id="form6Example6" class="form-control" formControlName="phone">
+            <label class="form-label" for="form6Example6">Phone</label>
+            <div *ngIf="f['phone'].invalid && (f['phone'].touched || f['phone'].dirty)">
+                <div *ngIf="f['phone'].errors && f['phone'].errors['required']" class="text-danger">Phone no. is
+                    required.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkbox -->
+    <div class="form-check d-flex justify-content-center mb-4">
+        <div>
+            <input class="form-check-input me-2" type="checkbox" id="form6Example8" formControlName="check">
+            <label class="form-check-label" for="form6Example8"> Create an account? </label>
+        </div>
+        <div *ngIf="f['check'].invalid && (f['check'].touched || f['check'].dirty)">
+            <div *ngIf="f['check'].errors && f['check'].errors['required']" class="text-danger">Accept term and
+                condition.
+            </div>
+        </div>
+    </div>
+
+    <!-- Submit button -->
+    <button type="submit" class="btn btn-primary btn-block mb-4 me-4" [disabled]="groupForm.invalid"
+        (click)="onClick()">Submit</button>
+    <button type="button" class="btn btn-primary btn-block mb-4" (click)="onReset()">Reset</button>
+</form>

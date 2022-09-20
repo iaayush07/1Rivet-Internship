@@ -1,25 +1,35 @@
-<div class="container" >
-    <h2>{{title}} form</h2>
-    <form class="form-horizontal" action="/action_page.php" #customersForm ="ngForm" (ngSubmit)="customerSubmit(customersForm.value)">
-      <div class="form-group">
-        <label class="control-label col-sm-2" for="name" routerLink="password">Name:</label>
-        <div class="col-sm-10">          
-          <input type="text" class="form-control" id="pwd" placeholder="Enter Name" name="name" ngModel>
+<div class="container">
+  <h2>{{title}} form</h2>
+  <form class="form-horizontal" #customersForm="ngForm" (ngSubmit)="customerSubmit()">
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="name" routerLink="password">Name:</label>
+      <div class="col-sm-10">
+        <input type="text" [(ngModel)]="customerDetails.fname" name="fname" #fname="ngModel" class="form-control"
+          id="name" placeholder="Enter Name" required>
+        <div *ngIf="(isSubmitted || (fname.invalid && (fname.dirty || fname.touched))) ">
+          <p class="text-danger" *ngIf="fname.errors?.['required'] ">this is required</p>
         </div>
       </div>
+    </div>
 
-      <div class="form-group">
-        <label class="control-label col-sm-2" for="email">Email:</label>
-        <div class="col-sm-10">
-          <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" ngModel>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="email">Email:</label>
+      <div class="col-sm-10">
+        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email"
+          [(ngModel)]="customerDetails.email" name="email" #email="ngModel" required email>
+        <div *ngIf="(isSubmitted || (email.invalid && (email.dirty || email.touched))) ">
+          <p class="text-danger" *ngIf="email.errors?.['required'] ">this is required</p>
         </div>
       </div>
-     
-      <div class="form-group mt-3">        
-        <div class="col-sm-offset-2 col-sm-10">
-          <button type="submit" class="btn btn-outline-primary  me-3" (click)="onSave()">Submit</button>
-          <button type="button" class="btn btn-outline-primary" (click)="onCancle()">Cancle</button>
-        </div>
+    </div>
+
+    <div class="form-group mt-3">
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-outline-primary  me-3" [disabled]="customersForm.invalid">Submit</button>
+        <!-- (click)="onSave()" -->
+        <button type="button" class="btn btn-outline-primary" (click)="onCancle()">Cancle</button>
+        <!-- (click)="onCancle()" -->
       </div>
-    </form>
-  </div>
+    </div>
+  </form>
+</div>

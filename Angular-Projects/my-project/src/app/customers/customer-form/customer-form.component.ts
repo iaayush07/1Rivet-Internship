@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { customer } from 'src/app/customer.model';
 
 @Component({
   selector: 'app-customer-form',
@@ -8,8 +9,12 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class CustomerFormComponent implements OnInit {
 
+  public customerDetails ;
+
   public title : string;
   public customerid : any;
+
+  public isSubmitted : boolean;
   
   constructor(
     public route : Router,
@@ -19,6 +24,9 @@ export class CustomerFormComponent implements OnInit {
     this.customerid = this.activatedRouter.snapshot.params['customerid']
    
     this.title = this.customerid ? 'Edit' : 'Add';
+    this.customerDetails = new customer();
+
+    this.isSubmitted = false;
    }
 
   ngOnInit(): void {
@@ -31,7 +39,10 @@ export class CustomerFormComponent implements OnInit {
   onCancle(){
     this.route.navigate(['customers','customer-list'])
   }
-  customerSubmit(value : any){
-    console.log(value);
+
+  
+  customerSubmit(){
+    console.log(this.customerDetails);
+    this.isSubmitted = true;
   }
 }

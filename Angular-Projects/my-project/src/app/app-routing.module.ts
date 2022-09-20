@@ -19,6 +19,7 @@ const routes: Routes = [
     component: AboutComponent,
   },
   { path: 'customers', loadChildren: () => import('./customers/customers.module').then(m => m.CustomersModule) },
+  { path: 'reactiveForm', loadChildren: () => import('./reactive-form/reactive-form.module').then(m => m.ReactiveFormModule) },
   {
     path: '**',
     component: PageNotFoundComponent,

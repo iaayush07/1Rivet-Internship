@@ -4,36 +4,46 @@
         <div class="col">
             <div class="form-outline">
                 <label class="form-label" for="form3Example1">First name</label>
-                <input type="text" id="form3Example1" class="form-control" required ngModel name="fname">
+                <input type="text" id="form3Example1" class="form-control"  [(ngModel)]="user.fname" name="fname" #fname="ngModel" required >
+                <div *ngIf="(isSubmitted || (fname.invalid && (fname.dirty || fname.touched))) ">
+                    <p class="text-danger" *ngIf="fname.errors?.['required'] ">this is required</p>
+                </div>         
             </div>
         </div>
     </div>
     <div class="row mb-4">
         <div class="col">
             <div class="form-outline">
-               
                 <label class="form-label" for="form3Example2">Last name</label>
-                <input type="text" id="form3Example2" class="form-control" required ngModel name="lname">
+                <input type="text" id="form3Example2" class="form-control" [(ngModel)]="user.lname" name="lname" #lname="ngModel" required>
+                <div *ngIf="(isSubmitted || (lname.invalid && (lname.dirty || lname.touched))) ">
+                    <p class="text-danger" *ngIf="lname.errors?.['required'] ">this is required</p>
+                </div>  
             </div>
         </div>
     </div>
 
     <!-- Email input -->
     <div class="form-outline mb-4">
-        
         <label class="form-label" for="form3Example3">Email address</label>
-        <input type="email" id="form3Example3" class="form-control" required ngModel name="email" email>
+        <input type="email" id="form3Example3" class="form-control" [(ngModel)]="user.email" name="email" #email="ngModel" required email>
+        <div *ngIf="(isSubmitted || (email.invalid && (email.dirty || email.touched))) ">
+            <p class="text-danger" *ngIf="email.errors?.['required'] ">this is required</p>
+        </div>  
     </div>
 
     <!-- contact input -->
     <div class="form-outline mb-4">
         
         <label class="form-label" for="form3Example4">contact</label>
-        <input type="text" id="form3Example4" class="form-control" required ngModel name="contact">
+        <input type="text" id="form3Example4" class="form-control" [(ngModel)]="user.contact" name="contact" #contact="ngModel" required>
+        <div *ngIf="(isSubmitted || (contact.invalid && (contact.dirty || contact.touched))) ">
+            <p class="text-danger" *ngIf="contact.errors?.['required'] ">this is required</p>
+        </div>  
     </div>
 
     <!-- Submit button -->
-    <button type="submit" class="btn btn-primary btn-block mb-4" [disabled]="userForm.valid">Submit</button>
+    <button type="submit" class="btn btn-primary btn-block mb-4" [disabled]="userForm.invalid">Submit</button>
 
     <!-- Register buttons -->
     <div class="text-center">

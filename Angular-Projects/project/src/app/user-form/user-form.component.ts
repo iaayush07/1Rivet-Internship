@@ -12,9 +12,11 @@ export class UserFormComponent implements OnInit {
 
   @ViewChild('userForm') form!: NgForm ;
   public user: user;
+  public isSubmitted : boolean;
 
   constructor() {
     this.user = new user();
+    this.isSubmitted = false;
    }
 
   ngOnInit(): void {
@@ -23,6 +25,7 @@ export class UserFormComponent implements OnInit {
   
   onSubmit(){
     console.log(this.form);
+    this.isSubmitted = true;
   }
 
 }
