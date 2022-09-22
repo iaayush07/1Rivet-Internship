@@ -9,8 +9,6 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class EmployeeListComponent implements OnInit {
 
-  // public empList : any =[];
-
   public x : any ;
   public empDetails : any ;
  
@@ -36,14 +34,12 @@ export class EmployeeListComponent implements OnInit {
     }   
   } 
 
-  onDetails(){
-    this.route.navigate(['employee/employee-details'])
+  onDetails(item : any){
+    this.route.navigate(['employee/employee-details'],{queryParams : item})
   }
 
   onEdit(item : any) : void{
-    // debugger
     this.listData.emit(item)
-    
   }
   
 }

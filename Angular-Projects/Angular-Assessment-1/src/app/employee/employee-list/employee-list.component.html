@@ -1,4 +1,5 @@
-<h3>Employee List</h3>
+<div class="w-75 container">
+    <h3>Employee List</h3>
 <table class="table">
     <thead>
       <tr>
@@ -25,12 +26,13 @@
                 {{item.salary | currency : 'INR'}}
             </td>
             <td>
-                <button type="button" class="btn btn-outline-primary me-3" (click)="onDetails()">Details</button> 
-                <button type="button" class="btn btn-outline-primary me-3" (click)="onEdit(item)">Edit</button>
+                <button type="button" class="btn btn-outline me-3" (click)="onDetails(item)">Details</button> 
+                <button type="button" class="btn btn-outline me-3" (click)="onEdit(item)">Edit</button>
                 <!-- [routerLink]="['edit',item.id]" -->
-                <button type="button" class="btn btn-outline-primary me-3" (click)="onDelete(x)">Delete</button>
+                <button type="button" class="btn btn-outline me-3" (click)="onDelete(x)">Delete</button>
             </td>
           </tr>
       
     </tbody>
   </table>
+</div>

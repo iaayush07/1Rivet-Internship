@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-employee-details',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmployeeDetailsComponent implements OnInit {
 
-  constructor() { }
+ public myParam : any;
+  constructor(
+    private route : ActivatedRoute
+  ) {
+
+
+   }
 
   ngOnInit(): void {
+    this.route.queryParamMap.subscribe(params => this.myParam=params);
+   
+    }
   }
 
-}
+
+
