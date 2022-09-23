@@ -1,0 +1,38 @@
+<div class="w-75 container">
+    <h3>Employee List</h3>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Gender</th>
+        <th scope="col">DOB</th>
+        <th scope="col">Salary</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of details">
+          
+            <td>
+                {{item.name | titlecase}}
+            </td>
+            <td>
+                {{item.gender | uppercase}}
+            </td>
+            <td>
+                {{item.dob | date : 'mediumDate'}}
+            </td>
+            <td>
+                {{item.salary | currency : 'INR'}}
+            </td>
+            <td>
+                <button type="button" class="btn btn-outline me-3" (click)="onDetails(item)">Details</button> 
+                <button type="button" class="btn btn-outline me-3" (click)="onEdit(item)">Edit</button>
+                <!-- [routerLink]="['edit',item.id]" -->
+                <button type="button" class="btn btn-outline me-3" (click)="onDelete(x)">Delete</button>
+            </td>
+          </tr>
+      
+    </tbody>
+  </table>
+</div>

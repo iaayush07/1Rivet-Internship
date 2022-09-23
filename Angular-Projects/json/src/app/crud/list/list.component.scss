@@ -1,0 +1,11 @@
+@import "../../../assets/scss/variables";
+table {
+    border:$border-ternary;
+}
+.btn-outline{
+    border: $border-ternary;
+}
+.btn-outline:hover{
+    background-color: $background;
+    color: #fff;
+}
