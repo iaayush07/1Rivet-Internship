@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 import { user } from 'src/app/crud.model';
 import { ApiService } from 'src/app/shared/api.service';
 
@@ -12,17 +13,22 @@ export class FormComponent implements OnInit {
 
   public data: user[];
 
+  userid:string;
 
   public employeeForm : FormGroup;
   public isSubmitted : boolean; 
   constructor(
 
     private fb : FormBuilder,
-    private apiService : ApiService
+    private apiService : ApiService,
+    private activatedRouter : ActivatedRoute
 
+    
   ) { 
     
 
+
+    this.userid=''
     this.data=[]
 
     this.employeeForm = this.fb.group({
@@ -34,6 +40,12 @@ export class FormComponent implements OnInit {
     })
 
     this.isSubmitted = false;
+
+    this.activatedRouter.params.subscribe((res:any)=>{
+      this.userid =res.id
+      this.getUserById()
+     
+    })
   }
 
   ngOnInit(): void {
@@ -48,10 +60,21 @@ export class FormComponent implements OnInit {
   public onSave() : void{
 
     this.isSubmitted = true;
-
-    this.apiService.addUser(this.employeeForm.value).subscribe((Response)=>{
-      this.getUserdata();
-    })
+    
+    if(this.employeeForm.valid){
+      if(this.userid){
+        this.apiService.updateUser(this.employeeForm.value,Number(this.userid)).subscribe((Response:user)=>{
+          this.getUserdata();
+        })
+      }
+      else{
+        this.apiService.addUser(this.employeeForm.value).subscribe((Response)=>{
+          this.getUserdata();
+        })
+      }
+      
+    }
+    
     // this.data.push(this.employeeForm.value)
     // console.log(this.employeeForm);
     
@@ -63,12 +86,21 @@ export class FormComponent implements OnInit {
   onEdit(item:any){
     this.employeeForm.patchValue(item)
   }
+  //service for edit data
+ 
+  getUserById(){
+    this.apiService.getUserById(Number(this.userid)).subscribe((Response:user)=>{
+      this.employeeForm.patchValue(Response)
+
+    })
+  }
 
   //service for get data
   public getUserdata() : void {
     this.apiService.getUser().subscribe((api : user[])=>
     {
       this.data = api;
+  
     });
     
   }

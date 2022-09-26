@@ -1,18 +1,25 @@
 {
   "userData": [
     {
-      "name": "fdf",
-      "gender": "fdfd",
+      "name": "Ayush",
+      "gender": "male",
       "dob": "2022-09-09",
       "salary": 3445,
       "id": 3
     },
     {
-      "name": "fdf",
+      "name": "amresh",
       "gender": "fdfd",
       "dob": "2022-09-09",
       "salary": 3445,
       "id": 4
+    },
+    {
+      "name": "amresh prasad",
+      "gender": "fdfd",
+      "dob": "2022-09-09",
+      "salary": 3445,
+      "id": 6
     }
   ]
 }

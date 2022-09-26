@@ -16,14 +16,17 @@ export class ListComponent implements OnInit {
   @Input() public details : any; 
   @Output() public listData : EventEmitter<any>
      data: user[];
+   
 
   constructor(
     public route :Router,
     private activatedRouter : ActivatedRoute,
     public apiservice : ApiService
   ) { 
+    
     this.details = [];
   this.empDetails =  this.activatedRouter.snapshot.params['empdetails'] ;
+  
   this.listData =  new EventEmitter;
   this.data =[]
 }
@@ -56,10 +59,12 @@ export class ListComponent implements OnInit {
   }
 
   //service for update data
-  onEdit() : void{
-    this.apiservice.updateUser(this.)
+  onEdit(itemID :number) : void{
+   this.route.navigate(['crud/edit/' + itemID])
+    
   }
 
 
+ 
 
 }

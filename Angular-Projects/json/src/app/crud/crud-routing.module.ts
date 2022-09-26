@@ -15,7 +15,7 @@ children: [
     component : FormComponent
   },
   {
-    path: 'edit',
+    path: 'edit/:id',
     component: FormComponent
   }
 ]

@@ -28,14 +28,19 @@ export class ApiService {
    }
 
    //delete method
-   deleteUser(id:any):Observable<any>{
+   deleteUser(id:number):Observable<any>{
     const url : string = this.baseUrl +  'userData/'+id;
     return this.http.delete(url)
    }
 
+   getUserById(id:number):Observable<any>{
+    const url : string = this.baseUrl + 'userData/'+ id;
+    return this.http.get(url)
+   }
+
    //update method
-   updateUser(user :user,id:number):Observable<any>{
-    const url : string = this.baseUrl +  'userData/'+id;
+   updateUser(user:user,id:number):Observable<any>{
+    const url : string = this.baseUrl +  'userData/'+ id;
     return this.http.put(url,user)
    }
   

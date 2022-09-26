@@ -11,7 +11,7 @@
       </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let item of details">
+        <tr *ngFor="let item of details;index as i">
           
             <td>
                 {{item.name | titlecase}}
@@ -27,7 +27,7 @@
             </td>
             <td>
                 <button type="button" class="btn btn-outline me-3" (click)="onDetails(item)">Details</button> 
-                <button type="button" class="btn btn-outline me-3" (click)="onEdit(item)">Edit</button>
+                <button type="button" class="btn btn-outline me-3" (click)="onEdit(item.id)">Edit</button>
                 <!-- [routerLink]="['edit',item.id]" -->
                 <button type="button" class="btn btn-outline me-3" (click)="onDelete(item.id)">Delete</button>
             </td>
