@@ -43,7 +43,10 @@ export class FormComponent implements OnInit {
 
     this.activatedRouter.params.subscribe((res:any)=>{
       this.userid =res.id
-      this.getUserById()
+      if(this.userid){
+        this.getUserById()
+      }
+     
      
     })
   }
@@ -75,6 +78,8 @@ export class FormComponent implements OnInit {
       
     }
     
+    this.onReset();
+
     // this.data.push(this.employeeForm.value)
     // console.log(this.employeeForm);
     
@@ -82,6 +87,7 @@ export class FormComponent implements OnInit {
   
   onReset(){
     this.employeeForm.reset();
+    this.isSubmitted=false;
   }
   onEdit(item:any){
     this.employeeForm.patchValue(item)
