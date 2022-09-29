@@ -1,5 +1,5 @@
 <div class="container mx-auto w-75  m-4 border-ternary">
-    <h3 class="d-flex justify-content-center">CRUD Employee</h3>
+    <h3 class="d-flex justify-content-center">{{title}} Employee</h3>
 
     <div class="d-flex justify-content-center">
         <form style="width:300px" [formGroup]="employeeForm">
@@ -55,7 +55,6 @@
                     </div>
                 </div>
             </div>
-    
             <button type="button" class="btn btn-outline m-4 " (click)="onReset()">Reset</button>
             <button type="submit" class="btn btn-outline m-4 " (click)="onSave()" [disabled]="employeeForm.invalid">Save</button>
         </form>

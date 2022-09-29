@@ -22,6 +22,7 @@ const routes: Routes = [
   { path: 'employee', loadChildren: () => import('./employee/employee.module').then(m => m.EmployeeModule) },
   
   { path: 'crud', loadChildren: () => import('./crud/crud.module').then(m => m.CrudModule) },
+  { path: 'Rxjs', loadChildren: () => import('./rxjs/rxjs.module').then(m => m.RxjsModule) },
   {
     path: '**',
     component: PageNotFoundComponent,

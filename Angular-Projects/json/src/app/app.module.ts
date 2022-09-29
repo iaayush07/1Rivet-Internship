@@ -11,6 +11,7 @@ import { EmployeeModule } from './employee/employee.module';
 import { HttpClientModule } from '@angular/common/http';
 import { CrudModule } from './crud/crud.module';
 import { ApiService } from './shared/api.service';
+import { RxjsModule } from './rxjs/rxjs.module';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { ApiService } from './shared/api.service';
     CoreModule,
     EmployeeModule,
     CrudModule,
+    RxjsModule,
     HttpClientModule
   ],
   providers: [ApiService],

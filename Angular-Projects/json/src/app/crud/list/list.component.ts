@@ -15,7 +15,7 @@ export class ListComponent implements OnInit {
  
   @Input() public details : any; 
   @Output() public listData : EventEmitter<any>
-     data: user[];
+     public data: user[];
    
 
   constructor(
@@ -59,12 +59,10 @@ export class ListComponent implements OnInit {
   }
 
   //service for update data
-  onEdit(itemID :number) : void{
+  onEdit(itemID :user) : void{
    this.route.navigate(['crud/edit/' + itemID])
     
   }
 
-
- 
 
 }

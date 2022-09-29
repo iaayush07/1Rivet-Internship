@@ -44,4 +44,10 @@ export class ApiService {
     return this.http.put(url,user)
    }
   
+   //_print
+   Print(value:any,id:any){
+    const li = document.createElement('li');
+    li.innerText=value;
+    document.getElementById(id)?.appendChild(li)
+   }
 }

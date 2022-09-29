@@ -11,24 +11,26 @@ import { ApiService } from 'src/app/shared/api.service';
 })
 export class FormComponent implements OnInit {
 
+  // Store user in data from crud.model.ts file......
   public data: user[];
 
-  userid:string;
+  userid:any;
 
   public employeeForm : FormGroup;
   public isSubmitted : boolean; 
+  public title : string; 
   constructor(
 
     private fb : FormBuilder,
     private apiService : ApiService,
     private activatedRouter : ActivatedRoute
 
+
     
   ) { 
     
-
-
-    this.userid=''
+    this.title='Add';
+   
     this.data=[]
 
     this.employeeForm = this.fb.group({
@@ -42,17 +44,19 @@ export class FormComponent implements OnInit {
     this.isSubmitted = false;
 
     this.activatedRouter.params.subscribe((res:any)=>{
-      this.userid =res.id
+      this.userid =res['id']
       if(this.userid){
         this.getUserById()
       }
-     
-     
     })
+
+
   }
 
   ngOnInit(): void {
     this.getUserdata();
+    this.title=this.userid? 'Edit':'Add';
+
   }
   get f(): { [key: string]: AbstractControl } {
     return this.employeeForm.controls;
@@ -99,7 +103,7 @@ export class FormComponent implements OnInit {
       this.employeeForm.patchValue(Response)
 
     })
-  }
+  } 
 
   //service for get data
   public getUserdata() : void {
