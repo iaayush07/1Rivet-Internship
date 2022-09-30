@@ -46,6 +46,7 @@ export class EmployeeFormComponent implements OnInit {
     this.data.push(this.employeeForm.value)
     console.log(this.employeeForm);
     
+    // this.employeeForm.reset();
   }
   
   onReset(){

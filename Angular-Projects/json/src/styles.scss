@@ -1,3 +1,22 @@
 @import "assets/scss/variables";
 
 /* You can add global styles to this file, and also import other style files */
+
+ul.list li{
+    background: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 8px 13px;
+    margin-bottom: 10px;
+}
+ul.list.error li{
+   color: red;
+   background-color: rgb(206, 183, 183);
+   border-color: red;
+}
+
+ul.list.complete li{
+    color: #3dd843;
+    background-color: rgba(148, 220, 150, 0.08);
+    border-color: #3dd843;
+ }

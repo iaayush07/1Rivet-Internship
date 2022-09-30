@@ -1,23 +1,33 @@
 import { Component, OnInit } from '@angular/core';
-import { AsyncSubject, Subject } from 'rxjs';
+import { ReplaySubject } from 'rxjs';
 import { ApiService } from 'src/app/shared/api.service';
 
 @Component({
-  selector: 'app-subject',
-  templateUrl: './subject.component.html',
-  styleUrls: ['./subject.component.scss']
+  selector: 'app-replay-subject',
+  templateUrl: './replay-subject.component.html',
+  styleUrls: ['./replay-subject.component.scss']
 })
-export class SubjectComponent implements OnInit {
+export class ReplaySubjectComponent implements OnInit {
 
- 
-  public subject = new Subject();
 
+  public subject = new ReplaySubject(4);
+
+  
+  // a:number=10;
+  // b:number=10;
   public observer1:any;
   public observer2:any;
   public status:any;
   constructor(private apiservice : ApiService) { }
 
+  
   ngOnInit(): void {
+    this.subject.next(6)
+    this.subject.next(7)
+    this.subject.next(8)
+    this.subject.next(9)
+    this.subject.next(10)
+    this.subject.next(11)
     this.observer1 = this.subject.subscribe({
       next:(msg)=>{
         console.log("Next: "+msg);
@@ -38,6 +48,7 @@ export class SubjectComponent implements OnInit {
         }, 2000);
         
       }
+      
     })
     this.subject.next(1)
     this.subject.next(2)
@@ -85,11 +96,3 @@ export class SubjectComponent implements OnInit {
     // })
     // this.subject.next(4);
   }
-
-
-
-
-function ngAfterViewInit() {
-  throw new Error('Function not implemented.');
-}
-

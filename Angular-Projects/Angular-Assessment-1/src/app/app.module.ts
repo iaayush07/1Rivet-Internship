@@ -18,7 +18,6 @@ import { EmployeeModule } from './employee/employee.module';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     CoreModule,
     EmployeeModule
   ],

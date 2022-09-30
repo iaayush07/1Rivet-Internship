@@ -7,6 +7,10 @@ import { PromiseComponent } from './promise/promise.component';
 import { ObbservalComponent } from './obbserval/obbserval.component';
 import { ObservalListComponent } from './obbserval/observal-list/observal-list.component';
 import { SubjectComponent } from './obbserval/observal-list/subject/subject.component';
+import { ObservalExampleComponent } from './obbserval/observal-list/observal-example/observal-example.component';
+import { BehaviourSubjectComponent } from './obbserval/observal-list/behaviour-subject/behaviour-subject.component';
+import { AsyncSubjectComponent } from './obbserval/observal-list/async-subject/async-subject.component';
+import { ReplaySubjectComponent } from './obbserval/observal-list/replay-subject/replay-subject.component';
 
 
 @NgModule({
@@ -15,7 +19,11 @@ import { SubjectComponent } from './obbserval/observal-list/subject/subject.comp
     PromiseComponent,
     ObbservalComponent,
     ObservalListComponent,
-    SubjectComponent
+    SubjectComponent,
+    ObservalExampleComponent,
+    BehaviourSubjectComponent,
+    AsyncSubjectComponent,
+    ReplaySubjectComponent
   ],
   imports: [
     CommonModule,

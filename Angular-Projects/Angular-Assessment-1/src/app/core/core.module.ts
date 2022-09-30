@@ -13,8 +13,8 @@ import { AppRoutingModule } from '../app-routing.module';
     CommonModule,
     AppRoutingModule
   ],
-  exports : [
-    NavbarComponent
+  exports: [
+    NavbarComponent, AppRoutingModule
   ]
 })
 export class CoreModule { }

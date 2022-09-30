@@ -9,13 +9,15 @@ const routes: Routes = [
 
   children: [
     {
-      path : '',
-      component : EmployeeFormComponent
+      path: '',
+      pathMatch : 'full',
+      redirectTo : 'add'
     },
     {
-      path : 'employee',
+      path : 'add',
       component : EmployeeFormComponent
     },
+    
     {
       path : 'employee-details',
       component : EmployeeDetailsComponent
