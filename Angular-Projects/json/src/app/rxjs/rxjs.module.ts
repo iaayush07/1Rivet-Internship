@@ -11,6 +11,8 @@ import { ObservalExampleComponent } from './obbserval/observal-list/observal-exa
 import { BehaviourSubjectComponent } from './obbserval/observal-list/behaviour-subject/behaviour-subject.component';
 import { AsyncSubjectComponent } from './obbserval/observal-list/async-subject/async-subject.component';
 import { ReplaySubjectComponent } from './obbserval/observal-list/replay-subject/replay-subject.component';
+import { OperatorsComponent } from './obbserval/observal-list/operators/operators.component';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -23,7 +25,8 @@ import { ReplaySubjectComponent } from './obbserval/observal-list/replay-subject
     ObservalExampleComponent,
     BehaviourSubjectComponent,
     AsyncSubjectComponent,
-    ReplaySubjectComponent
+    ReplaySubjectComponent,
+    OperatorsComponent
   ],
   imports: [
     CommonModule,
