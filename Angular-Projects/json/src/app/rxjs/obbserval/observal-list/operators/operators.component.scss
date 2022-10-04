@@ -1,0 +1,15 @@
+@import "../../../../../assets/scss/variables";
+
+ul.list{
+    list-style-type:none;
+    margin: 0;
+    padding: 0;
+}
+
+.btn-outline{
+    border: $border-ternary;
+}
+.btn-outline:hover{
+    background-color: $background;
+    color: #fff;
+}

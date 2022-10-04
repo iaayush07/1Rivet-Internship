@@ -13,6 +13,9 @@ import { AsyncSubjectComponent } from './obbserval/observal-list/async-subject/a
 import { ReplaySubjectComponent } from './obbserval/observal-list/replay-subject/replay-subject.component';
 import { OperatorsComponent } from './obbserval/observal-list/operators/operators.component';
 import { RouterModule } from '@angular/router';
+import { CombinationsComponent } from './obbserval/observal-list/combinations/combinations.component';
+import { FilteringComponent } from './obbserval/observal-list/filtering/filtering.component';
+import { TransformationComponent } from './obbserval/observal-list/transformation/transformation.component';
 
 
 @NgModule({
@@ -26,7 +29,10 @@ import { RouterModule } from '@angular/router';
     BehaviourSubjectComponent,
     AsyncSubjectComponent,
     ReplaySubjectComponent,
-    OperatorsComponent
+    OperatorsComponent,
+    CombinationsComponent,
+    FilteringComponent,
+    TransformationComponent
   ],
   imports: [
     CommonModule,
