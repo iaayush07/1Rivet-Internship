@@ -96,22 +96,15 @@ export class FormComponent implements OnInit {
   onEdit(item:any){
     this.employeeForm.patchValue(item)
   }
+
   //service for edit data
  
   getUserById(){
-    this.apiService.getUserById(Number(this.userid)).subscribe((Response:user)=>{
-      this.employeeForm.patchValue(Response)
-
-    })
+    this.apiService.getUserById(Number(this.userid)).subscribe((Response:user)=>{this.employeeForm.patchValue(Response)})
   } 
 
   //service for get data
   public getUserdata() : void {
-    this.apiService.getUser().subscribe((api : user[])=>
-    {
-      this.data = api;
-  
-    });
-    
+    this.apiService.getUser().subscribe((api : user[])=>{this.data = api;}); 
   }
 }

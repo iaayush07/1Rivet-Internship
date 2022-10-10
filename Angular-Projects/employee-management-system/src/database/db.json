@@ -1,0 +1,32 @@
+{
+  "empData": [
+    {
+      "name": "Ayushh",
+      "gender": "male",
+      "dob": "2022-10-06",
+      "salary": 12,
+      "id": 10
+    },
+    {
+      "name": "iusdffdedds",
+      "gender": "male",
+      "dob": "2022-10-15",
+      "salary": 12,
+      "id": 12
+    },
+    {
+      "name": "Ayush",
+      "gender": "male",
+      "dob": "2022-10-08",
+      "salary": 125,
+      "id": 13
+    },
+    {
+      "name": "Ayush",
+      "gender": "male",
+      "dob": "2022-10-06",
+      "salary": 12,
+      "id": 14
+    }
+  ]
+}

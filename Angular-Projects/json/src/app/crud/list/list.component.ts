@@ -23,8 +23,7 @@ export class ListComponent implements OnInit {
     private activatedRouter : ActivatedRoute,
     public apiservice : ApiService
   ) { 
-    
-    this.details = [];
+  this.details = [];
   this.empDetails =  this.activatedRouter.snapshot.params['empdetails'] ;
   
   this.listData =  new EventEmitter;
@@ -61,8 +60,6 @@ export class ListComponent implements OnInit {
   //service for update data
   onEdit(itemID :user) : void{
    this.route.navigate(['crud/edit/' + itemID])
-    
   }
-
 
 }
