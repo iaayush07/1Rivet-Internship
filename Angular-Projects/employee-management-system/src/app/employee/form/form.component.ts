@@ -38,7 +38,6 @@ export class FormComponent implements OnInit {
     this.activatedroute.params.subscribe(params => {
       this.id = params['id'];
       console.log(this.id);
-
     })
 
 

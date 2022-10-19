@@ -7,6 +7,8 @@ import { FormComponent } from './form/form.component';
 import { ListComponent } from './list/list.component';
 import { DetailsComponent } from './details/details.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { EmployeeService } from './services/employee.service';
+import { BreadcrumService } from './services/breadcrum.service';
 
 
 @NgModule({
@@ -20,6 +22,11 @@ import { ReactiveFormsModule } from '@angular/forms';
     CommonModule,
     EmployeeRoutingModule,
     ReactiveFormsModule
+  ],
+  providers: [
+    EmployeeService,
+    BreadcrumService
+    // company--
   ]
 })
 export class EmployeeModule { }

@@ -6,7 +6,7 @@
             <div class="form-group">
                 <label for="eid">Name</label>
                 <input type="text" class="form-control" id="eid" placeholder="Name" formControlName="name" required
-                [ngClass]="{'is-invalid' : f['name'].invalid && (isSubmitted || f['name'].touched || f['name'].dirty),
+                    [ngClass]="{'is-invalid' : f['name'].invalid && (isSubmitted || f['name'].touched || f['name'].dirty),
                         'is-valid' : f['name'].valid && (isSubmitted || f['name'].touched || f['name'].dirty)}">
                 <div *ngIf=" f['name'].invalid && (isSubmitted || f['name'].touched || f['name'].dirty)">
                     <div *ngIf="f['name'].errors && f['name'].errors['required']" class="text-danger">Name is Required.
@@ -18,8 +18,8 @@
             </div>
             <div class="form-group">
                 <label for="egender">Gender</label>
-                <input type="text" class="form-control" id="egender" placeholder="Gender" formControlName="gender" required
-                [ngClass]="{'is-invalid' : f['gender'].invalid && (isSubmitted || f['gender'].touched || f['gender'].dirty),
+                <input type="text" class="form-control" id="egender" placeholder="Gender" formControlName="gender"
+                    required [ngClass]="{'is-invalid' : f['gender'].invalid && (isSubmitted || f['gender'].touched || f['gender'].dirty),
                 'is-valid' : f['gender'].valid && (isSubmitted || f['gender'].touched || f['gender'].dirty)}">
                 <div *ngIf="f['gender'].invalid && (isSubmitted || f['gender'].touched || f['gender'].dirty)">
                     <div *ngIf="f['gender'].errors && f['gender'].errors['required']" class="text-danger">
@@ -33,18 +33,17 @@
             <div class="form-group">
                 <label for="edob">D.O.B</label>
                 <input type="date" class="form-control" id="edob" placeholder="Date OF Birth" formControlName="dob"
-                    required
-                    [ngClass]="{'is-invalid' : f['dob'].invalid && (isSubmitted || f['dob'].touched || f['dob'].dirty),
+                    required [ngClass]="{'is-invalid' : f['dob'].invalid && (isSubmitted || f['dob'].touched || f['dob'].dirty),
                     'is-valid' : f['dob'].valid && (isSubmitted || f['dob'].touched || f['dob'].dirty)}">
                 <div *ngIf="f['dob'].invalid && (isSubmitted || f['dob'].touched || f['dob'].dirty)">
-                    <div *ngIf="f['dob'].errors && f['dob'].errors['required']" class="text-danger">Dob is Required.</div>
+                    <div *ngIf="f['dob'].errors && f['dob'].errors['required']" class="text-danger">Dob is Required.
+                    </div>
                 </div>
             </div>
             <div class="form-group">
                 <label for="esalary">Salary</label>
                 <input type="number" class="form-control" id="esalary" placeholder="Salary" formControlName="salary"
-                    required
-                    [ngClass]="{'is-invalid' : f['salary'].invalid && (isSubmitted || f['salary'].touched || f['salary'].dirty),
+                    required [ngClass]="{'is-invalid' : f['salary'].invalid && (isSubmitted || f['salary'].touched || f['salary'].dirty),
                     'is-valid' : f['salary'].valid && (isSubmitted || f['salary'].touched || f['salary'].dirty)}">
                 <div *ngIf="f['salary'].invalid && (isSubmitted || f['salary'].touched || f['salary'].dirty)">
                     <div *ngIf="f['salary'].errors && f['salary'].errors['required']" class="text-danger">Salary is
@@ -56,9 +55,10 @@
                 </div>
             </div>
             <button type="button" class="btn btn-outline m-4 " (click)="onReset()">Reset</button>
-            <button type="submit" class="btn btn-outline m-4 " (click)="onSave()" [disabled]="employeeForm.invalid">Save</button>
+            <button type="submit" class="btn btn-outline m-4 " (click)="onSave()"
+                [disabled]="employeeForm.invalid">Save</button>
         </form>
     </div>
-    
+
 </div>
 <app-list [details]="data" (listData)="onEdit($event)"></app-list>

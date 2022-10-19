@@ -6,6 +6,7 @@ import { CrudComponent } from './crud.component';
 import { FormComponent } from './form/form.component';
 import { ListComponent } from './list/list.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ResolverResolver } from './resolver.resolver';
 
 
 @NgModule({
@@ -19,9 +20,12 @@ import { ReactiveFormsModule } from '@angular/forms';
     CrudRoutingModule,
     ReactiveFormsModule
   ],
-  exports :[
+  exports: [
     FormComponent,
     ListComponent
+  ],
+  providers: [
+    ResolverResolver
   ]
 })
 export class CrudModule { }

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CrudComponent } from './crud.component';
 import { FormComponent } from './form/form.component';
+import { ResolverResolver } from './resolver.resolver';
 
 const routes: Routes = [{
   path: '', component: CrudComponent,
@@ -17,7 +18,8 @@ const routes: Routes = [{
     },
     {
       path: 'edit/:id',
-      component: FormComponent
+      component: FormComponent,
+      resolve: { user: ResolverResolver }
     }
   ]
 }

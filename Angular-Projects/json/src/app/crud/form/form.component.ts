@@ -14,39 +14,39 @@ export class FormComponent implements OnInit {
   // Store user in data from crud.model.ts file......
   public data: user[];
 
-  userid:any;
+  userid: any;
 
-  public employeeForm : FormGroup;
-  public isSubmitted : boolean; 
-  public title : string; 
+  public employeeForm: FormGroup;
+  public isSubmitted: boolean;
+  public title: string;
   constructor(
 
-    private fb : FormBuilder,
-    private apiService : ApiService,
-    private activatedRouter : ActivatedRoute
+    private fb: FormBuilder,
+    private apiService: ApiService,
+    private activatedRouter: ActivatedRoute
 
 
-    
-  ) { 
-    
-    this.title='Add';
-   
-    this.data=[]
+
+  ) {
+
+    this.title = 'Add';
+
+    this.data = []
 
     this.employeeForm = this.fb.group({
-   
-      name : ['',[Validators.required,Validators.minLength(3)]],
-      gender : ['',[Validators.required,Validators.pattern(/^[A-Za-z]+$/)]],
-      dob : ['',[Validators.required]],
-      salary : ['',[Validators.required,Validators.pattern(/^[0-9]+$/)]]
+
+      name: ['', [Validators.required, Validators.minLength(3)]],
+      gender: ['', [Validators.required, Validators.pattern(/^[A-Za-z]+$/)]],
+      dob: ['', [Validators.required]],
+      salary: ['', [Validators.required, Validators.pattern(/^[0-9]+$/)]]
     })
 
     this.isSubmitted = false;
 
-    this.activatedRouter.params.subscribe((res:any)=>{
-      this.userid =res['id']
-      if(this.userid){
-        this.getUserById()
+    this.activatedRouter.params.subscribe((res: any) => {
+      this.userid = res['id']
+      if (this.userid) {
+        // this.getUserById()
       }
     })
 
@@ -55,7 +55,11 @@ export class FormComponent implements OnInit {
 
   ngOnInit(): void {
     this.getUserdata();
-    this.title=this.userid? 'Edit':'Add';
+    this.title = this.userid ? 'Edit' : 'Add';
+
+    this.activatedRouter.data.subscribe((data: any) => {
+      this.employeeForm.patchValue(data)
+    })
 
   }
   get f(): { [key: string]: AbstractControl } {
@@ -64,47 +68,51 @@ export class FormComponent implements OnInit {
 
   //service for push data
 
-  public onSave() : void{
+  public onSave(): void {
 
     this.isSubmitted = true;
-    
-    if(this.employeeForm.valid){
-      if(this.userid){
-        this.apiService.updateUser(this.employeeForm.value,Number(this.userid)).subscribe((Response:user)=>{
+
+    if (this.employeeForm.valid) {
+      if (this.userid) {
+        this.apiService.updateUser(this.employeeForm.value, Number(this.userid)).subscribe((Response: user) => {
           this.getUserdata();
         })
       }
-      else{
-        this.apiService.addUser(this.employeeForm.value).subscribe((Response)=>{
+      else {
+        this.apiService.addUser(this.employeeForm.value).subscribe((Response) => {
           this.getUserdata();
         })
       }
-      
+
     }
-    
+
     this.onReset();
 
     // this.data.push(this.employeeForm.value)
     // console.log(this.employeeForm);
-    
+
   }
-  
-  onReset(){
+
+  onReset() {
     this.employeeForm.reset();
-    this.isSubmitted=false;
+    this.isSubmitted = false;
   }
-  onEdit(item:any){
-    this.employeeForm.patchValue(item)
+  onEdit(item: any) {
+    this.activatedRouter.data.subscribe((data: any) => {
+      this.employeeForm.patchValue(data);
+      console.log(data);
+
+    })
   }
 
   //service for edit data
- 
-  getUserById(){
-    this.apiService.getUserById(Number(this.userid)).subscribe((Response:user)=>{this.employeeForm.patchValue(Response)})
-  } 
+
+  // getUserById(){
+  //   this.apiService.getUserById(Number(this.userid)).subscribe((Response:user)=>{this.employeeForm.patchValue(Response)})
+  // } 
 
   //service for get data
-  public getUserdata() : void {
-    this.apiService.getUser().subscribe((api : user[])=>{this.data = api;}); 
+  public getUserdata(): void {
+    this.apiService.getUser().subscribe((api: user[]) => { this.data = api; });
   }
 }

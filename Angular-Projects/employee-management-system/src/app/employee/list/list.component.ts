@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { employee } from '../employee.model';
+import { BreadcrumService } from '../services/breadcrum.service';
 import { EmployeeService } from '../services/employee.service';
 
 @Component({
@@ -15,6 +16,7 @@ export class ListComponent implements OnInit {
   constructor(
     private employeeserice: EmployeeService,
     private router: Router,
+    private bcService: BreadcrumService
     // private actroute : ActivatedRoute
   ) {
     this.empList = [];
@@ -40,7 +42,8 @@ export class ListComponent implements OnInit {
   }
   onEdit(employee: employee) {
     this.router.navigate(['employee/edit/' + employee.id]);
-    this.outputList.emit(employee)
+    this.outputList.emit(employee);
+    this.bcService.showSuccess()
     // console.log(employee);
   }
 
