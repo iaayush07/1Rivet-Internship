@@ -11,24 +11,28 @@ import { HttpClientModule } from '@angular/common/http';
 import { CanActivateGuard } from './guard/can-activate.guard';
 import { AuthenticationService } from './authentication.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ToastrModule } from 'ngx-toastr';
+import { ToastrModule, ToastrService } from 'ngx-toastr';
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ContactComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CoreModule,
+    ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot()
   ],
-  providers: [CanActivateGuard, AuthenticationService],
+  providers: [CanActivateGuard, AuthenticationService, ToastrService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

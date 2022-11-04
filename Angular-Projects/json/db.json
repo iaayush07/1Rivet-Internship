@@ -35,5 +35,33 @@
       "salary": 21121,
       "id": 10
     }
+  ],
+  "states": [
+    {
+      "id": 1,
+      "state": "Gujarat"
+    },
+    {
+      "id": 2,
+      "state": "Maharashtra"
+    }
+  ],
+  "cities": [
+    {
+      "id": 1,
+      "city": "Surat"
+    },
+    {
+      "id": 1,
+      "city": "Navsari"
+    },
+    {
+      "id": 2,
+      "city": "Mumbai"
+    },
+    {
+      "id": 2,
+      "city": "Pune"
+    }
   ]
 }

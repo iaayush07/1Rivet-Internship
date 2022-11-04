@@ -14,6 +14,9 @@ export class FormComponent implements OnInit {
   // Store user in data from crud.model.ts file......
   public data: user[];
 
+  stateArr: any = [];
+  cityArr: any = []
+
   userid: any;
 
   public employeeForm: FormGroup;
@@ -31,14 +34,17 @@ export class FormComponent implements OnInit {
 
     this.title = 'Add';
 
-    this.data = []
+    this.data = [];
+    // this.cityArr = []
 
     this.employeeForm = this.fb.group({
 
       name: ['', [Validators.required, Validators.minLength(3)]],
       gender: ['', [Validators.required, Validators.pattern(/^[A-Za-z]+$/)]],
       dob: ['', [Validators.required]],
-      salary: ['', [Validators.required, Validators.pattern(/^[0-9]+$/)]]
+      salary: ['', [Validators.required, Validators.pattern(/^[0-9]+$/)]],
+      state: [''],
+      city: ['']
     })
 
     this.isSubmitted = false;
@@ -60,6 +66,8 @@ export class FormComponent implements OnInit {
     this.activatedRouter.data.subscribe((data: any) => {
       this.employeeForm.patchValue(data)
     })
+
+    this.getState();
 
   }
   get f(): { [key: string]: AbstractControl } {
@@ -114,5 +122,20 @@ export class FormComponent implements OnInit {
   //service for get data
   public getUserdata(): void {
     this.apiService.getUser().subscribe((api: user[]) => { this.data = api; });
+  }
+
+  //get state 
+  getState() {
+    this.apiService.getState().subscribe(res => {
+      this.stateArr = res;
+    })
+  }
+  getCity(e: any) {
+    console.log(e.target.value);
+    const state = e.target.value;
+    // this.cityArr.filter(city=> city.id = e.target.value)
+    this.apiService.getCity().subscribe(res => {
+      this.cityArr = res.filter((city: any) => city.id == state)
+    })
   }
 }

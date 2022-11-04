@@ -54,6 +54,21 @@
                     </div>
                 </div>
             </div>
+            <!-- ---------nested state and city-------// -->
+            <div class="form-group">
+                <label for="state">select state</label>
+                <select class="form-control" id="state" formControlName="state" (change)="getCity($event)">
+                    <option value="">select state</option>
+                    <option *ngFor="let states of stateArr" value="{{states.id}}">{{states.state}}</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="city">select city</label>
+                <select class="form-control" id="city" formControlName="city">
+                    <option value="">select city</option>
+                    <option *ngFor="let cities of cityArr">{{cities.city}}</option>
+                </select>
+            </div>
             <button type="button" class="btn btn-outline m-4 " (click)="onReset()">Reset</button>
             <button type="submit" class="btn btn-outline m-4 " (click)="onSave()"
                 [disabled]="employeeForm.invalid">Save</button>

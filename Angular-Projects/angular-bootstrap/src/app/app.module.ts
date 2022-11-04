@@ -13,6 +13,8 @@ import { NgClassComponent } from './ng-class/ng-class.component';
 import { NgStyleComponent } from './ng-style/ng-style.component';
 import { HomeComponent } from './routing/home/home.component';
 import { AboutComponent } from './routing/about/about.component';
+import { FormComponent } from './form/form.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,11 +28,13 @@ import { AboutComponent } from './routing/about/about.component';
     NgClassComponent,
     NgStyleComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

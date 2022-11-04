@@ -1,0 +1,28 @@
+{
+  "signupData": [
+    {
+      "username": "ius",
+      "email": "ius@kuchbhi.com",
+      "password": "ius",
+      "id": 10
+    },
+    {
+      "username": "ayushh",
+      "email": "ayushh@kuchbhi.com",
+      "password": "ayushh",
+      "id": 11
+    },
+    {
+      "username": "manish",
+      "email": "manish@kuchbhi.com",
+      "password": "manish",
+      "id": 12
+    },
+    {
+      "username": "almira",
+      "email": "almira@kuchbhi.com",
+      "password": "akmira",
+      "id": 13
+    }
+  ]
+}
